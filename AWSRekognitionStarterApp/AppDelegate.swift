@@ -26,12 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Initialize Identity Provider
-        let credentialsProvider = AWSCognitoCredentialsProvider(
-            regionType: .USEast1,
-            identityPoolId: "<YOUR-COGNITO-IDENTITY-POOL-ID-HERE>")
-        let configuration = AWSServiceConfiguration(
-            region: .USEast1,
-            credentialsProvider: credentialsProvider)
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+           identityPoolId:"us-east-1:82c51b0b-ad20-4c34-b67e-b1ea95af10b8")
+
+        let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         
         return true

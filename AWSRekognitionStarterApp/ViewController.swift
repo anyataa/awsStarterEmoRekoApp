@@ -91,10 +91,58 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         rekognitionObject = AWSRekognition.default()
+        
         let celebImageAWS = AWSRekognitionImage()
+        let emotionImageAWS = AWSRekognitionEmotion()
         celebImageAWS?.bytes = celebImageData
+        
+        
+        
         let celebRequest = AWSRekognitionRecognizeCelebritiesRequest()
+        let faceRequest = AWSRekognitionDetectFacesRequest()
+        faceRequest?.attributes = ["ALL", "DEFAULT"]
+        faceRequest?.image = celebImageAWS
+        
         celebRequest?.image = celebImageAWS
+        
+        
+//        print("emotion : " + "\(String(describing: emotionImageAWS!.confidence))")
+        
+        rekognitionObject?.detectFaces(faceRequest!) {
+            (result, error) in
+            if error != nil{
+                print(error!)
+                return
+            }
+           
+        if (result!.faceDetails!.count > 0) {
+            for (index, face) in result!.faceDetails!.enumerated() {
+                AWSRekognitionEmotionName
+                print(face)
+                print("emotions : " + "\(face.emotions)")
+                
+                face.emotions?.forEach({ (emo) in
+                    var item : AWSRekognitionEmotion
+                    item = emo
+                    print("confidence : " + "\(String(describing: item.confidence))")
+                    
+                   
+                })
+                
+                
+                
+                
+                
+                
+                
+                
+            }
+        }
+        
+        
+        
+        
+       }
         
         rekognitionObject?.recognizeCelebrities(celebRequest!){
             (result, error) in
@@ -102,6 +150,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 print(error!)
                 return
             }
+            
             
             //1. First we check if there are any celebrities in the response
             if ((result!.celebrityFaces?.count)! > 0){
@@ -136,6 +185,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                             }
                             //Update the celebrity links map that we will use next to create buttons
                             self?.infoLinksMap[index] = "https://"+celebFace.urls![0]
+                            
                             
                             //Create a button that will take users to the IMDb link when tapped
                             let infoButton:UIButton = celebrityInImage.createInfoButton()

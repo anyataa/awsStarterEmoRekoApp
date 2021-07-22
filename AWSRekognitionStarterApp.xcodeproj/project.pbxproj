@@ -17,6 +17,8 @@
 		76A7736E213F302200974231 /* AWSRekognitionStarterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7736D213F302200974231 /* AWSRekognitionStarterAppTests.swift */; };
 		76A77379213F302200974231 /* AWSRekognitionStarterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A77378213F302200974231 /* AWSRekognitionStarterAppUITests.swift */; };
 		76F9DD9A213F5724006358C3 /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F9DD99213F5724006358C3 /* Celebrity.swift */; };
+		8483FB7826A8FD6B00D0878F /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8483FB7726A8FD6B00D0878F /* sad.png */; };
+		8483FB8026A8FE3200D0878F /* confuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 8483FB7F26A8FE3200D0878F /* confuse.png */; };
 		95CE485162F942032A5E13F5 /* Pods_AWSRekognitionStarterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF46A2EA46CBF4F6D649739 /* Pods_AWSRekognitionStarterApp.framework */; };
 		F004822D2151CED700FCE53B /* jeff_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = F004822C2151CED700FCE53B /* jeff_portrait.png */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		76A77378213F302200974231 /* AWSRekognitionStarterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSRekognitionStarterAppUITests.swift; sourceTree = "<group>"; };
 		76A7737A213F302200974231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F9DD99213F5724006358C3 /* Celebrity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
+		8483FB7726A8FD6B00D0878F /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
+		8483FB7F26A8FE3200D0878F /* confuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confuse.png; sourceTree = "<group>"; };
 		CBC5CAB1E1E06D6159FAFE61 /* Pods_AWSRekognitionStarterAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSRekognitionStarterAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33859DD844A86E9F7DF3BD6 /* Pods-AWSRekognitionStarterAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSRekognitionStarterAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AWSRekognitionStarterAppUITests/Pods-AWSRekognitionStarterAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F004822C2151CED700FCE53B /* jeff_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jeff_portrait.png; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				F004822C2151CED700FCE53B /* jeff_portrait.png */,
+				8483FB7726A8FD6B00D0878F /* sad.png */,
+				8483FB7F26A8FE3200D0878F /* confuse.png */,
 				76F9DD99213F5724006358C3 /* Celebrity.swift */,
 				76A77358213F302100974231 /* AppDelegate.swift */,
 				76A7735A213F302100974231 /* ViewController.swift */,
@@ -283,9 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				76A77363213F302100974231 /* LaunchScreen.storyboard in Resources */,
+				8483FB7826A8FD6B00D0878F /* sad.png in Resources */,
 				76A77360213F302100974231 /* Assets.xcassets in Resources */,
 				76A7735E213F302100974231 /* Main.storyboard in Resources */,
 				F004822D2151CED700FCE53B /* jeff_portrait.png in Resources */,
+				8483FB8026A8FE3200D0878F /* confuse.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +320,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AWSRekognitionStarterApp/Pods-AWSRekognitionStarterApp-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AWSRekognitionStarterApp/Pods-AWSRekognitionStarterApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSRekognition/AWSRekognition.framework",
 			);
@@ -323,7 +331,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AWSRekognitionStarterApp/Pods-AWSRekognitionStarterApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AWSRekognitionStarterApp/Pods-AWSRekognitionStarterApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7CAAA100D2CAA3A2BB24C63A /* [CP] Check Pods Manifest.lock */ = {
